@@ -851,6 +851,16 @@ form.addEventListener("submit", async function(e){
         return;
     }
 
+    // Get selected events
+    const selectedEvents = Array.from(
+        document.querySelectorAll('input[name="events"]:checked')
+    ).map(e => e.value);
+
+    if(selectedEvents.length === 0){
+        alert("Please select at least one event");
+        return;
+    }
+
     const data = {
         first: inputs[0].value,
         last: inputs[1].value,
@@ -858,6 +868,7 @@ form.addEventListener("submit", async function(e){
         phone: phone,
         organization: inputs[4].value,
         type: inputs[5].value,
+        events: selectedEvents.join(", "),
         notes: inputs[6].value
     };
 
@@ -867,7 +878,6 @@ form.addEventListener("submit", async function(e){
     submitBtn.disabled = true;
 
     try {
-
         await fetch("https://script.google.com/macros/s/AKfycbyd5WnzF4Q9B_nnZZJLfnxZVSRN7z0LHiRnMvFOlqbVOEJ4emB9z1AMgylHkJiyhcz4/exec",{
             method:"POST",
             body:JSON.stringify(data)
