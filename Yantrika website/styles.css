@@ -100,64 +100,6 @@ img {
   margin: 0 auto;
   padding: 0 24px;
 }
-.general-rules-list {
-  list-style: none;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.general-rule-item {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 18px 24px;
-  margin-bottom: 14px;
-  background: rgba(0, 200, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.general-rule-item:hover {
-  border-color: rgba(0, 229, 255, 0.2);
-  background: rgba(0, 229, 255, 0.06);
-  transform: translateX(6px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.general-rule-num {
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #00e5ff, #2979ff, #448aff);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 12px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.25);
-}
-
-.general-rule-text {
-  color: #7eb8e0;
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.general-rule-text strong {
-  color: #00e5ff;
-}
-
-.general-rule-text i {
-  color: #80d8ff;
-  margin-right: 10px;
-  width: 20px;
-  text-align: center;
-}
 
 
 
