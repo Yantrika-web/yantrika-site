@@ -113,10 +113,10 @@ img {
   gap: 18px;
   padding: 18px 24px;
   margin-bottom: 14px;
-  background: var(--bg-glass-strong);
+  background: rgba(0, 200, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-md);
-  transition: var(--transition);
+  border-radius: 16px;
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .general-rule-item:hover {
@@ -132,7 +132,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-warm);
+  background: linear-gradient(135deg, #00e5ff, #2979ff, #448aff);
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -142,22 +142,23 @@ img {
 }
 
 .general-rule-text {
-  color: var(--text-secondary);
+  color: #7eb8e0;
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 1.5;
 }
 
 .general-rule-text strong {
-  color: var(--accent-neon);
+  color: #00e5ff;
 }
 
 .general-rule-text i {
-  color: var(--accent-ice);
+  color: #80d8ff;
   margin-right: 10px;
   width: 20px;
   text-align: center;
 }
+
 
 /* === SCROLL REVEAL ANIMATIONS === */
 .reveal {
