@@ -1619,7 +1619,7 @@ header.scrolled {
 .sponsor-logo {
   border-radius: var(--radius-sm);
   max-height: 90px;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
