@@ -276,6 +276,36 @@
 
 
 
+          <!-- Sponsor Section -->
+      <section class="sponsor-section" id="sponsor">
+        <h2 class="section-title reveal">Our Sponsor</h2>
+        <div class="sponsor-carousel-wrapper reveal">
+          <div class="swiper sponsor-swiper">
+            <div class="swiper-wrapper">
+              <!-- Sponsor Card 1 -->
+              <div class="swiper-slide">
+                <div class="sponsor-card">
+                  <div class="sponsor-logo-box">
+                    <img src="./yantrika-images/future_optima.jpg" alt="Future Optima Logo" class="sponsor-logo" draggable="false">
+                  </div>
+                  <div class="sponsor-details">
+                    <h3 class="sponsor-name">Future Optima</h3>
+                    <p class="sponsor-desc"><strong>Future Optima</strong> is a next-generation tech learning and innovation platform focused on building job-ready talent in AI, Data Science, data analytics, python fullstack, Mearnstack and Cybersecurity. We empower students through hands-on training, live projects, and real-world exposure, bridging the gap between education and industry.</p>
+                    <p class="sponsor-desc">We are committed to creating skilled professionals who can drive innovation and deliver impact in today’s digital world. Future Optima has successfully empowered 1000+ students with placements, building strong careers in AI, Data Science, and Cybersecurity.</p>
+                    <div class="sponsor-company">Our IT company is <strong>Loopgen Technologies</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+
+
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
       <h2 class="section-title reveal">Contact Us</h2>
@@ -642,6 +672,24 @@ swiperContainer.addEventListener("mouseleave", () => {
       el.addEventListener('touchstart', function() { this.style.opacity = '0.85'; }, { passive: true });
       el.addEventListener('touchend', function() { this.style.opacity = ''; }, { passive: true });
     });
+
+          // ============ SPONSOR SWIPER CAROUSEL ============
+      const sponsorSwiper = new Swiper(".sponsor-swiper", {
+        loop: false,
+        grabCursor: true,
+        spaceBetween: 24,
+        pagination: {
+          el: ".sponsor-carousel-wrapper .swiper-pagination",
+          clickable: true,
+          dynamicBullets: true
+        },
+        breakpoints: {
+          0: { slidesPerView: 1, spaceBetween: 16 },
+          768: { slidesPerView: 1, spaceBetween: 24 },
+          1024: { slidesPerView: 1, spaceBetween: 28 }
+        }
+      });
+
   </script>
 </body>
 </html>
