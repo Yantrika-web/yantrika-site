@@ -1534,138 +1534,61 @@ header.scrolled {
 
 
 /* === SPONSOR SECTION === */
+/* Container Styling */
 .sponsor-section {
-  padding: 80px 0;
-  background: var(--bg-secondary);
-  position: relative;
-}
-
-.sponsor-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-neon), var(--accent-blue), transparent);
-}
-
-.sponsor-carousel-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-}
-
-.sponsor-swiper {
-  padding: 20px 0 60px;
-}
-
-.sponsor-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  gap: 24px;
-  padding: 32px 24px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  height: auto;
+  padding: 50px 20px;
+  background-color: #ffffff; /* Change this if your site has a different background */
+  font-family: Arial, sans-serif;
 }
 
-.sponsor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(0, 229, 255, 0.2);
-  border-color: rgba(0, 229, 255, 0.2);
+.sponsor-section h2 {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.sponsor-card::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 150px;
-  height: 150px;
-  background: var(--accent-neon);
-  filter: blur(80px);
-  opacity: 0;
-  border-radius: 50%;
-  transition: opacity 0.4s ease;
-}
-
-.sponsor-card:hover::before {
-  opacity: 0.15;
-}
-
-.sponsor-logo-box {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 18px 24px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: var(--glow-blue);
-  backdrop-filter: blur(10px);
-  max-width: 220px;
-  width: 100%;
+/* Flexbox Layout for the Logos */
+.sponsor-gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 50px; /* Space between logos */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.sponsor-logo {
-  border-radius: var(--radius-sm);
-  max-height: 90px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+/* Individual Logo Container */
+.sponsor-item {
+  width: 250px; /* Adjust base width as needed */
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-.sponsor-card:hover .sponsor-logo {
-  transform: scale(1.08);
+/* Hover Effect */
+.sponsor-item:hover {
+  transform: scale(1.08); /* Slight zoom on hover */
 }
 
-.sponsor-details {
-  z-index: 1;
+/* Image Styling */
+.sponsor-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Optional: Add a subtle shadow if you want them to pop 
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
 }
 
-.sponsor-name {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  background: var(--gradient-warm);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sponsor-gallery {
+    gap: 30px;
+  }
+  .sponsor-item {
+    width: 200px; 
+  }
 }
-
-.sponsor-desc {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-.sponsor-desc strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.sponsor-company {
-  color: var(--accent-ice);
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.sponsor-company strong {
-  color: var(--accent-neon);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
